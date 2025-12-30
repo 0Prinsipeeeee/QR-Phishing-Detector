@@ -1,0 +1,20 @@
+.title {
+  color: #0070f3;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.description {
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.divContainer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
