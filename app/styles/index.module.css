@@ -18,3 +18,52 @@
     align-items: center;
     padding: 2rem;
 }
+
+.imgContainer {
+
+}
+
+
+
+
+/* styles/dropzone.css or module.css */
+
+ .dropContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  height: 50px;
+  padding: 20px;
+
+  border: 2px dashed #555;
+  border-radius: 10px;
+
+  color: #444;
+  cursor: pointer;
+
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.dropContainer:hover {
+  background: #eee;
+  border-color: #111;
+}
+
+.dropContainer:hover .drop-title {
+  color: #222;
+}
+
+.dropTitle {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fileInput {
+   display: none;
+}
+

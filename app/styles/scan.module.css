@@ -1,0 +1,357 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.header {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    color: #1a1a1a;
+    margin: 1rem 0 0.5rem;
+    font-size: 2.5rem;
+}
+
+.scanInfo {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+}
+
+.scanInfo code {
+    background: #f1f1f1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+.statusBadge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #e7f1ff;
+    color: #0066cc;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 4rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0066cc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 2rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.error {
+    text-align: center;
+    padding: 4rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error h2 {
+    color: #dc3545;
+    margin-bottom: 1rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.statCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.statCard:hover {
+    transform: translateY(-4px);
+}
+
+.statCard.malicious {
+    border-top: 4px solid #dc3545;
+}
+
+.statCard.suspicious {
+    border-top: 4px solid #ffc107;
+}
+
+.statCard.harmless {
+    border-top: 4px solid #28a745;
+}
+
+.statCard.undetected {
+    border-top: 4px solid #6c757d;
+}
+
+.statCard h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+.statNumber {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+.statSubtitle {
+    margin: 0.5rem 0 0;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Results Section */
+.resultsSection {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.resultsSection h2 {
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.resultsTable {
+    overflow-x: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.resultsTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resultsTable th {
+    background: #f8f9fa;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.resultsTable td {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.engineName {
+    font-weight: 600;
+    color: #212529;
+}
+
+.resultBadge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: center;
+}
+
+.maliciousBadge {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.suspiciousBadge {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.cleanBadge {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Summary */
+.summary {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.summary h3 {
+    margin-top: 0;
+    color: #1a1a1a;
+}
+
+.verdictBadge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Meta Info */
+.metaInfo {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.metaGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.metaItem {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #0066cc;
+}
+
+/* Actions */
+.actions {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.refreshButton {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.refreshButton:hover {
+    background: #0056b3;
+}
+
+/* Back Button */
+.backButton {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.backButton:hover {
+    background: #5a6268;
+    text-decoration: none;
+}
+
+/* Raw Data */
+.rawData {
+    margin-top: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.rawData summary {
+    cursor: pointer;
+    padding: 0.5rem;
+    font-weight: 600;
+    color: #0066cc;
+}
+
+.jsonCode {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-top: 1rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+}
+
+/* No Results */
+.noResults {
+    text-align: center;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .header, .resultsSection, .summary, .metaInfo {
+        padding: 1.5rem;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .statsGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .statNumber {
+        font-size: 2.5rem;
+    }
+}
